@@ -16,5 +16,11 @@ namespace IS_2_20_HajievAA_U
         {
             InitializeComponent();
         }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Task1 t1 = new Task1();
+            t1.ShowDialog();
+        }
     }
 }
