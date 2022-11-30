@@ -1,7 +1,7 @@
 ﻿
 namespace IS_2_20_HajievAA_U
 {
-    partial class Task1
+    partial class Ex1
     {
         /// <summary>
         /// Required designer variable.

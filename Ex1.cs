@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IS_2_20_HajievAA_U
 {
-    public partial class Task1 : Form
+    public partial class Ex1 : Form
     {
-        public Task1()
+        public Ex1()
         {
             InitializeComponent();
         }
@@ -81,7 +81,7 @@ namespace IS_2_20_HajievAA_U
             }
             public override string Display()
             {
-                return $@"Цена: {cost}р \n Год выпуска: {age}г \n Артикул:{Artic} \n Количество оборотов: {Turn}об/мин \n Интерфейс: {ifac} \n Объем: {val}Гб \n ";
+                return $"Цена: {cost}р \n Год выпуска: {age}г \n Артикул:{Artic} \n Количество оборотов: {Turn}об/мин \n Интерфейс: {ifac} \n Объем: {val}Гб \n ";
             }
         }
         class VCard<T> : Complect<T>
@@ -130,7 +130,7 @@ namespace IS_2_20_HajievAA_U
             }
             public override string Display()
             {
-                return $@"Цена: {cost}р \n Год выпуска: {age}г \n Артикул:{Artic} \n Частота: {freq}Гц \n Производитель: {manufacturer} \n Объем памяти: {memory}Гб \n ";
+                return $"Цена: {cost}р \n Год выпуска: {age}г \n Артикул:{Artic} \n Частота: {freq}Гц \n Производитель: {manufacturer} \n Объем памяти: {memory}Гб \n ";
             }
         }
         HDD<int> hdd;

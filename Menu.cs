@@ -19,8 +19,14 @@ namespace IS_2_20_HajievAA_U
         
         private void button1_Click(object sender, EventArgs e)
         {
-            Task1 t1 = new Task1();
-            t1.ShowDialog();
+            Ex1 x1 = new Ex1();
+            x1.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Ex2 x2 = new Ex2();
+            x2.ShowDialog();
         }
     }
 }
