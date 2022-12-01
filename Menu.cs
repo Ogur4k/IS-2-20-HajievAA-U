@@ -28,5 +28,11 @@ namespace IS_2_20_HajievAA_U
             Ex2 x2 = new Ex2();
             x2.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Ex3 x3 = new Ex3();
+            x3.ShowDialog();
+        }
     }
 }

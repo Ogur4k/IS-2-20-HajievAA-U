@@ -90,6 +90,12 @@
     <Compile Include="Ex2.Designer.cs">
       <DependentUpon>Ex2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ex3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex3.Designer.cs">
+      <DependentUpon>Ex3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="Ex2.resx">
       <DependentUpon>Ex2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ex3.resx">
+      <DependentUpon>Ex3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
