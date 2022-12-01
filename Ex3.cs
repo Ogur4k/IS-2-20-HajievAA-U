@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static IS_2_20_HajievAA_U.Program;
 
 namespace IS_2_20_HajievAA_U
 {
@@ -17,35 +18,15 @@ namespace IS_2_20_HajievAA_U
         {
             InitializeComponent();
         }
-        ///////////////////////////////////////////////////////
-        public class Connect
-        {
-            string strConnect;
-            MySqlConnection Conn;
-            public MySqlConnection Connection()
-            {
-                Conn = new MySqlConnection(strConnect);
-                return Conn;
-            }
-            public string RCon()
-            {
-                return strConnect;
-            }
-            public Connect(string connect)
-            {
-                strConnect = connect;
-            }
-        }
-        ///////////////////////////////////////////////////////
         MySqlConnection сon;
-        Connect connect = new Connect("server=chuc.caseum.ru;port=33333;username=st_2_20_28;password=29461060;database=is_2_20_st28_KURS");
+        Connect connect = new Connect("server=10.90.12.110;port=33333;username=st_2_20_28;password=29461060;database=is_2_20_st28_KURS");
         DataTable dtable = new DataTable();
         MySqlDataAdapter medtable = new MySqlDataAdapter();
         BindingSource bs = new BindingSource();
         public void Infomation()
         {
             dtable.Clear();
-            string sqlI = "SELECT Client.ID AS `Код`, Client.Full_name AS `Имя`, Client.Phone AS `Телефон`, Client.Mail AS `Почта`, FROM Client FULL JOIN Main ON Client.ID = Main.ID_client"; 
+            string sqlI = "SELECT Client.ID AS 'Code', Client.Full_name AS 'Name', Client.Phone AS 'Phone', Client.Mail AS 'Mail' FROM Client JOIN Main ON Client.ID = Main.ID_client"; 
             сon.Open();
 
             medtable.SelectCommand = new MySqlCommand(sqlI, сon);
@@ -60,12 +41,6 @@ namespace IS_2_20_HajievAA_U
             dataGridView1.Columns[1].Visible = true;
             dataGridView1.Columns[2].Visible = true;
             dataGridView1.Columns[3].Visible = true;
-
-
-            dataGridView1.Columns[0].FillWeight = 12;
-            dataGridView1.Columns[1].FillWeight = 12;
-            dataGridView1.Columns[2].FillWeight = 12;
-            dataGridView1.Columns[3].FillWeight = 12;
 
             dataGridView1.Columns[0].ReadOnly = true;
             dataGridView1.Columns[1].ReadOnly = true;
@@ -97,7 +72,7 @@ namespace IS_2_20_HajievAA_U
             string i2 = "";
             string i3 = "";
             string i4 = "";
-            string sql = $"SELECT Client.ID AS `Код`, Client.Full_name AS `Имя`, Client.Phone AS `Телефон`, Client.Mail AS `Почта`, FROM Client FULL JOIN Main ON Client.ID = Main.ID_client" + id;
+            string sql = $"SELECT Client.ID AS 'Code', Client.Full_name AS 'Name', Client.Phone AS 'Phone', Client.Mail AS 'Mail' FROM Client JOIN Main ON Client.ID = Main.ID_client WHERE Client.ID = "+ id;
             MySqlCommand cmd = new MySqlCommand(sql, сon);
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -108,7 +83,7 @@ namespace IS_2_20_HajievAA_U
                 i4 = reader[3].ToString();
             }
             reader.Close();
-            label1.Text = $"Код: " + i1 + "\n" + "Имя: " + i2 + "\n" + "Телефон: " + i3 + "\n" + "Почта: " + i4;
+            label1.Text = $"Code: " + i1 + "\n" + "Name: " + i2 + "\n" + "Phone: " + i3 + "\n" + "Mail: " + i4;
             сon.Close();
         }
     }
