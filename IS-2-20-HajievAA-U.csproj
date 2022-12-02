@@ -84,6 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectBD.cs" />
     <Compile Include="Ex2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +96,12 @@
     </Compile>
     <Compile Include="Ex3.Designer.cs">
       <DependentUpon>Ex3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex4.Designer.cs">
+      <DependentUpon>Ex4.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -115,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ex3.resx">
       <DependentUpon>Ex3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ex4.resx">
+      <DependentUpon>Ex4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

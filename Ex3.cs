@@ -19,7 +19,7 @@ namespace IS_2_20_HajievAA_U
             InitializeComponent();
         }
         MySqlConnection сon;
-        Connect connect = new Connect("server=10.90.12.110;port=33333;username=st_2_20_28;password=29461060;database=is_2_20_st28_KURS");
+        Connect connect = new Connect("server=chuc.caseum.ru;port=33333;username=st_2_20_28;password=29461060;database=is_2_20_st28_KURS");
         DataTable dtable = new DataTable();
         MySqlDataAdapter medtable = new MySqlDataAdapter();
         BindingSource bs = new BindingSource();
@@ -65,7 +65,7 @@ namespace IS_2_20_HajievAA_U
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
             сon.Open();
             string i1 = "";
