@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
-namespace IS_2_20_HajievAA_U
+namespace ConectBD
 {
     public class Connect
     {

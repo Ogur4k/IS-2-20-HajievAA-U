@@ -323,7 +323,7 @@ namespace IS_2_20_HajievAA_U
             this.label13.TabIndex = 24;
             this.label13.Text = "---->";
             // 
-            // Task1
+            // Ex1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -354,8 +354,9 @@ namespace IS_2_20_HajievAA_U
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox1);
-            this.Name = "Task1";
+            this.Name = "Ex1";
             this.Text = "Task1";
+            this.Load += new System.EventHandler(this.Ex1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
